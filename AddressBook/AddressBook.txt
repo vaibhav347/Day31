@@ -1,0 +1,53 @@
+create table AdrressBook
+(fname varchar(20),lname varchar(20),address varchar(20),city varchar(20),state varchar(20),zip int,phone int,email varchar(20));
+
+
+
+insert into AdrressBook values
+(
+'Vaibhav','Aher','Ram Society','Pune','Maharashtra',404311,9359864,'vaibhavah@gmail.com'
+);
+
+
+
+
+insert into AdrressBook values
+(
+'Ram','Sharma','Ram Society','Pune','Maharashtra',404311,3234345,'ram@gmail.com','Friend'
+);
+
+
+
+update AdrressBook set phone=9912345 where fname='Vaibhav';
+
+
+
+delete AdrressBook where fname='Vaibhav';
+
+
+
+select * from AdrressBook where city='Puna' or state='Maharashtra';
+
+
+
+select count(city) cityCount,count(state) stateCount from AdrressBook;
+
+
+
+select * from AdrressBook where city='Pune' order by fname;
+
+
+
+alter table AdrressBook add type varchar(20);
+
+
+
+update AdrressBook set type='Family';
+
+
+
+select count(type) typeCount from AdrressBook;
+
+
+
+select * from AdrressBook;
